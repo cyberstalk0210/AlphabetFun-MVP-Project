@@ -24,34 +24,38 @@ const AlphabetChart = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const data = [
-      { letter: 'A', word: 'Apple', icon: '🍎' },
-      { letter: 'B', word: 'Bus', icon: '🚍' },
-      { letter: 'C', word: 'Crown', icon: '👑' },
-      { letter: 'D', word: 'Dinosaur', icon: '🦖' },
-      { letter: 'E', word: 'Egg', icon: '🥚' },
-      { letter: 'F', word: 'Frog', icon: '🐸' },
-      { letter: 'G', word: 'Goblin', icon: '👺' },
-      { letter: 'H', word: 'Helicopter', icon: '🚁' },
-      { letter: 'I', word: 'Iguana', icon: '🦎' },
-      { letter: 'J', word: 'Jam', icon: '🍓' },
-      { letter: 'K', word: 'King', icon: '👑' },
-      { letter: 'L', word: 'Lollipop', icon: '🍭' },
-      { letter: 'M', word: 'Mushroom', icon: '🍄' },
-      { letter: 'N', word: 'Nut', icon: '🥜' },
-      { letter: 'O', word: 'Octopus', icon: '🐙' },
-      { letter: 'P', word: 'Pig', icon: '🐷' },
-      { letter: 'Q', word: 'Queen', icon: '👸' },
-      { letter: 'R', word: 'Rainbow', icon: '🌈' },
-      { letter: 'S', word: 'Sun', icon: '☀️' },
-      { letter: 'T', word: 'Truck', icon: '🚛' },
-      { letter: 'U', word: 'Unicorn', icon: '🦄' },
-      { letter: 'V', word: 'Volcano', icon: '🌋' },
-      { letter: 'W', word: 'Watermelon', icon: '🍉' },
-      { letter: 'X', word: 'Xylophone', icon: '🎶' },
-      { letter: 'Y', word: 'Yarn', icon: '🧶' },
-      { letter: 'Z', word: 'Zebra', icon: '🦓' },
-    ];
+const data = [
+  { letter: 'A', word: 'Ayıq', icon: '🐻' },
+  { letter: 'B', word: 'Baliq', icon: '🐟' },
+  { letter: 'D', word: 'Dinozavr', icon: '🦖' },
+  { letter: 'E', word: 'Eshik', icon: '🚪' },
+  { letter: 'F', word: 'Fayz', icon: '✨' },
+  { letter: 'G', word: 'Gul', icon: '🌸' },
+  { letter: 'Gʻ', word: 'Gʻoz', icon: '🪿' },
+  { letter: 'H', word: 'Hammom', icon: '🛁' },
+  { letter: 'I', word: 'Ilon', icon: '🐍' },
+  { letter: 'J', word: 'Joʻja', icon: '🐥' },
+  { letter: 'K', word: 'Kitob', icon: '📘' },
+  { letter: 'L', word: 'Limon', icon: '🍋' },
+  { letter: 'M', word: 'Mushuk', icon: '🐱' },
+  { letter: 'N', word: 'Non', icon: '🍞' },
+  { letter: 'O', word: 'Olma', icon: '🍎' },
+  { letter: 'Oʻ', word: 'Oʻrdak', icon: '🦆' },
+  { letter: 'P', word: 'Pista', icon: '🥜' },
+  { letter: 'Q', word: 'Qoʻy', icon: '🐑' },
+  { letter: 'R', word: 'Rang', icon: '🎨' },
+  { letter: 'S', word: 'Sigir', icon: '🐄' },
+  { letter: 'T', word: 'Togʻ', icon: '⛰️' },
+  { letter: 'U', word: 'Uzum', icon: '🍇' },
+  { letter: 'V', word: 'Velosiped', icon: '🚲' },
+  { letter: 'X', word: 'Xarita', icon: '🗺️' },
+  { letter: 'Y', word: 'Yulduz', icon: '⭐' },
+  { letter: 'Z', word: 'Zebra', icon: '🦓' },
+  { letter: 'Ch', word: 'Choy', icon: '🍵' },
+  { letter: 'Sh', word: 'Shirinlik', icon: '🍬' },
+  { letter: 'Ng', word: 'Angin', icon: '📣' }
+];
+
 
     // 30ta element bo'lishi uchun 4ta bo'sh joy qo‘shamiz
     while (data.length < 30) {

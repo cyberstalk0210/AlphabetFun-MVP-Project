@@ -17,7 +17,6 @@ const QuizGame = () => {
     { image: 'scooter.jpg', options: ['Scooter', 'Hopscotch', 'Board game', 'Jigsaw puzzle'], correct: 'Scooter' },
     { image: 'boardgame.jpg', options: ['Scooter', 'Hopscotch', 'Board game', 'Jigsaw puzzle'], correct: 'Board game' },
     { image: 'jigsawpuzzle.jpg', options: ['Scooter', 'Hopscotch', 'Board game', 'Jigsaw puzzle'], correct: 'Jigsaw puzzle' },
-    // Add more questions as needed (up to 12 as shown)
     { image: 'videogame.jpg', options: ['Video game', 'Bike', 'Hula hoop', 'Pinwheel'], correct: 'Video game' },
     { image: 'bike.jpg', options: ['Video game', 'Bike', 'Hula hoop', 'Pinwheel'], correct: 'Bike' },
     { image: 'hulahoop.jpg', options: ['Video game', 'Bike', 'Hula hoop', 'Pinwheel'], correct: 'Hula hoop' },
