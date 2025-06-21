@@ -12,20 +12,21 @@ const QuizGame = () => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
 
   // Game data: image-word pairs
-  const gameData = [
-    { image: 'hopscotch.jpg', options: ['Scooter', 'Hopscotch', 'Board game', 'Jigsaw puzzle'], correct: 'Hopscotch' },
-    { image: 'scooter.jpg', options: ['Scooter', 'Hopscotch', 'Board game', 'Jigsaw puzzle'], correct: 'Scooter' },
-    { image: 'boardgame.jpg', options: ['Scooter', 'Hopscotch', 'Board game', 'Jigsaw puzzle'], correct: 'Board game' },
-    { image: 'jigsawpuzzle.jpg', options: ['Scooter', 'Hopscotch', 'Board game', 'Jigsaw puzzle'], correct: 'Jigsaw puzzle' },
-    { image: 'videogame.jpg', options: ['Video game', 'Bike', 'Hula hoop', 'Pinwheel'], correct: 'Video game' },
-    { image: 'bike.jpg', options: ['Video game', 'Bike', 'Hula hoop', 'Pinwheel'], correct: 'Bike' },
-    { image: 'hulahoop.jpg', options: ['Video game', 'Bike', 'Hula hoop', 'Pinwheel'], correct: 'Hula hoop' },
-    { image: 'pinwheel.jpg', options: ['Video game', 'Bike', 'Hula hoop', 'Pinwheel'], correct: 'Pinwheel' },
-    { image: 'telephone.jpg', options: ['Telephone', 'Jigsaw puzzle', 'Tic tac toe', 'Hide and seek'], correct: 'Telephone' },
-    { image: 'tictactoe.jpg', options: ['Telephone', 'Jigsaw puzzle', 'Tic tac toe', 'Hide and seek'], correct: 'Tic tac toe' },
-    { image: 'hideandseek.jpg', options: ['Telephone', 'Jigsaw puzzle', 'Tic tac toe', 'Hide and seek'], correct: 'Hide and seek' },
-    { image: 'tag.jpg', options: ['Tag', 'Jigsaw puzzle', 'Tic tac toe', 'Hide and seek'], correct: 'Tag' },
-  ];
+const gameData = [
+  { image: 'hopscotch.png', options: ['Skuter', 'Kvadrat o‘yin', 'Stol o‘yini', 'Puzzle'], correct: 'Kvadrat o‘yin' },
+  { image: 'scooter.png', options: ['Skuter', 'Kvadrat o‘yin', 'Stol o‘yini', 'Puzzle'], correct: 'Skuter' },
+  { image: 'boardgame.png', options: ['Skuter', 'Kvadrat o‘yin', 'Stol o‘yini', 'Puzzle'], correct: 'Stol o‘yini' },
+  { image: 'jigsawpuzzle.png', options: ['Skuter', 'Kvadrat o‘yin', 'Stol o‘yini', 'Puzzle'], correct: 'Puzzle' },
+  { image: 'videogame.png', options: ['Video o‘yin', 'Motosikl', 'Hula halqa', 'Shamol tegirmoni'], correct: 'Video o‘yin' },
+  { image: 'bike.png', options: ['Video o‘yin', 'Motosikl', 'Hula halqa', 'Shamol tegirmoni'], correct: 'Motosikl' },
+  { image: 'hulahoop.png', options: ['Video o‘yin', 'Motosikl', 'Hula halqa', 'Shamol tegirmoni'], correct: 'Hula halqa' },
+  { image: 'pinwheel.png', options: ['Video o‘yin', 'Motosikl', 'Hula halqa', 'Shamol tegirmoni'], correct: 'Shamol tegirmoni' },
+  { image: 'telephone.png', options: ['Telefon', 'Puzzle', 'X va O o‘yini', 'Bekinmachoq'], correct: 'Telefon' },
+  { image: 'tictactoe.png', options: ['Telefon', 'Puzzle', 'X va O o‘yini', 'Bekinmachoq'], correct: 'X va O o‘yini' },
+  { image: 'hideandseek.png', options: ['Telefon', 'Puzzle', 'X va O o‘yini', 'Bekinmachoq'], correct: 'Bekinmachoq' },
+  { image: 'tag.png', options: ['Quvlashmachoq', 'Puzzle', 'X va O o‘yini', 'Bekinmachoq'], correct: 'Quvlashmachoq' },
+];
+
 
   // Initialize timer
   useEffect(() => {
@@ -45,7 +46,7 @@ const QuizGame = () => {
   }, []);
 
   const playSound = (soundFile) => {
-    const filePath = `/assets/sounds/${soundFile}.mp3`;
+    const filePath = `/sounds/${soundFile}.mp3`;
     try {
       console.log(`Attempting to load: ${filePath}`);
       const sound = new Howl({
@@ -83,7 +84,7 @@ const QuizGame = () => {
         }
       }, 1000);
     } else {
-      playSound('incorrect');
+      playSound('error');
       setMistakes((prev) => {
         const newMistakes = prev + 1;
         if (newMistakes >= 3) {
@@ -110,7 +111,7 @@ const QuizGame = () => {
       <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-2xl flex flex-col items-center">
         <div className="mb-4">
           <img
-            src={`/assets/images/${gameData[currentQuestion].image}`}
+            src={`/assets/${gameData[currentQuestion].image}`}
             alt={gameData[currentQuestion].image}
             className="w-64 h-64 object-cover border-2 border-gray-300 rounded-lg"
           />
@@ -144,7 +145,7 @@ const QuizGame = () => {
       </div>
       {gameOver && (
         <button
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/quiz')}
           className="mt-4 bg-gray-600 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300"
         >
           Return to Home
