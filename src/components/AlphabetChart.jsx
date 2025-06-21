@@ -31,7 +31,6 @@ const data = [
   { letter: 'E', word: 'Eshik', icon: '🚪' },
   { letter: 'F', word: 'Fayz', icon: '✨' },
   { letter: 'G', word: 'Gul', icon: '🌸' },
-  { letter: 'Gʻ', word: 'Gʻoz', icon: '🪿' },
   { letter: 'H', word: 'Hammom', icon: '🛁' },
   { letter: 'I', word: 'Ilon', icon: '🐍' },
   { letter: 'J', word: 'Joʻja', icon: '🐥' },
@@ -40,7 +39,6 @@ const data = [
   { letter: 'M', word: 'Mushuk', icon: '🐱' },
   { letter: 'N', word: 'Non', icon: '🍞' },
   { letter: 'O', word: 'Olma', icon: '🍎' },
-  { letter: 'Oʻ', word: 'Oʻrdak', icon: '🦆' },
   { letter: 'P', word: 'Pista', icon: '🥜' },
   { letter: 'Q', word: 'Qoʻy', icon: '🐑' },
   { letter: 'R', word: 'Rang', icon: '🎨' },
@@ -51,13 +49,15 @@ const data = [
   { letter: 'X', word: 'Xarita', icon: '🗺️' },
   { letter: 'Y', word: 'Yulduz', icon: '⭐' },
   { letter: 'Z', word: 'Zebra', icon: '🦓' },
+  { letter: 'Gʻ', word: 'Gʻoz', icon: '🪿' },
+  { letter: 'Oʻ', word: 'Oʻrdak', icon: '🦆' },
   { letter: 'Ch', word: 'Choy', icon: '🍵' },
   { letter: 'Sh', word: 'Shirinlik', icon: '🍬' },
   { letter: 'Ng', word: 'Angin', icon: '📣' }
 ];
 
 
-    // 30ta element bo'lishi uchun 4ta bo'sh joy qo‘shamiz
+
     while (data.length < 30) {
       data.push(null);
     }
@@ -66,7 +66,7 @@ const data = [
   }, []);
 
   const getColor = (index) => {
-    const colors = ['#fb6b6b', '#4ecdc4', '#45b7d1', '#f3eead', '#d4a5a5', '#9b59b6'];
+const colors = ['#FFB6C1', '#FFD700', '#87CEFA', '#98FB98', '#FFA07A', '#BA55D3'];
     return colors[index % colors.length];
   };
 
@@ -79,7 +79,7 @@ const data = [
   };
 
   return (
-    <div style={{ display: 'grid',backgroundColor: 'brown', gridTemplateColumns: 'repeat(5, 0fr)', gap: '25px', justifyContent: 'center', padding: 32 }}>
+    <div style={{ display: 'grid',backgroundColor: '#FFFDF5', gridTemplateColumns: 'repeat(5, 0fr)', gap: '25px', justifyContent: 'center', padding: 32 }}>
       {letters.map((item, idx) =>
         item ? (
           <motion.div

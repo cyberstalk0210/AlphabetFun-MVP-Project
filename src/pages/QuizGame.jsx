@@ -11,7 +11,6 @@ const QuizGame = () => {
   const [gameOver, setGameOver] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
 
-  // Game data: image-word pairs
 const gameData = [
   { image: 'hopscotch.png', options: ['Skuter', 'Kvadrat o‘yin', 'Stol o‘yini', 'Puzzle'], correct: 'Kvadrat o‘yin' },
   { image: 'scooter.png', options: ['Skuter', 'Kvadrat o‘yin', 'Stol o‘yini', 'Puzzle'], correct: 'Skuter' },
