@@ -62,6 +62,7 @@ const cardData3 = {
             Interaktiv va qiziqarli mashg'ulotlar orqali harf tanlashni
             osonlashtiring!
           </p>
+          <div className="flex gap-4">
           <Button
             variant="contained"
             color="success"
@@ -71,6 +72,25 @@ const cardData3 = {
           >
             Darsni boshlash
           </Button>
+                   <Button
+            variant="contained"
+            color="success"
+            size="large"
+            style={{ textTransform: "none" }}
+            onClick={() => navigate('/quiz')}
+          >
+            Quiz o‘ynash
+          </Button>
+                   <Button
+            variant="contained"
+            color="success"
+            size="large"
+            style={{ textTransform: "none" }}
+            onClick={() => navigate('/match')}
+          >
+            Match o‘ynash
+          </Button>
+          </div>
         </div>
 
         {/* O‘NG TOMON: Rasm */}
@@ -91,7 +111,7 @@ const cardData3 = {
         <Card {...cardData2} />
         <Card {...cardData3} />
 
-        
+
       </div>
     </div>
   );
