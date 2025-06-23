@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import AlphabetGrid from "../components/AlphabetGrid";
 import { Button } from "@mui/material";
 import Card from "../components/card";
-import Image1 from "../assets/Group 2812.png"; // Bolakay rasmi
-import Image2 from "../assets/Group 2811.png"; // Belgilar rasmi
-import Image3 from "../assets/Group 2809.png";
+import Image1 from "../assets/Group 2812.png"; 
+import Image2 from "../assets/Group 2811.png"; 
+
 const Home = () => {
   const [letters, setLetters] = useState([]);
 
@@ -21,7 +21,6 @@ const Home = () => {
     ],
     icon: <span className="text-yellow-500 font-bold">🔤</span>,
   };
-
   const cardData2 = {
     title: "Harfma-Harf Rivojlanish",
     tagline: "O‘yin orqali savodxonlikni o‘rgating",
@@ -32,7 +31,6 @@ const Home = () => {
     ],
     icon: <span className="text-pink-500 font-bold">📚</span>,
   };
-
   const cardData3 = {
     title: "Alifbo Akademiyasi",
     tagline: "Farzandingizning birinchi bilim makoni",
