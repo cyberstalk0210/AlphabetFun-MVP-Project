@@ -5,6 +5,7 @@ import ParentDashboard from './pages/ParentDashboard';
 import AlphabetChart from './components/AlphabetChart';
 import MatchGame from './pages/MatchGame';
 import QuizGame from './pages/QuizGame';
+import Pronunciation from './pages/Pronunciation';
 
 const RoutesComponent = () => (
   <Routes>
@@ -14,6 +15,8 @@ const RoutesComponent = () => (
     <Route path="/chart" element={<AlphabetChart />} />
     <Route path="/quiz" element={<QuizGame />} />
     <Route path="/match" element={<MatchGame/>} />
+    <Route path="*" element={<Home />} />
+    <Route path="/pronunciation" element={<Pronunciation/>} />
   </Routes>
 );
 
